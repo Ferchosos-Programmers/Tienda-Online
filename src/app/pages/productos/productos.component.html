@@ -1,0 +1,9 @@
+<app-galeria></app-galeria>
+<div class="container">
+  <button class="toggle-button " (click)="toggleCarrito()">
+    <h5>🛒</h5>
+  </button>
+  <div class="row">
+    <app-carrito [class.hidden]="isCarritoHidden" class="sidebar"></app-carrito>
+  </div>
+</div>

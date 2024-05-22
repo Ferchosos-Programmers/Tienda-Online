@@ -1,0 +1,23 @@
+/* Estilos personalizados para el formulario */
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 25%;
+}
+
+
+
+/* Opcional: Estilos para centrar el formulario verticalmente */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 class="text-center mb-4">Carrito de Compras</h1>
+    @for (productosCarrito of productosCarrito; track productosCarrito) {
+        <div class="producto">
+            <img [src]="productosCarrito.imagen" alt="" class="img-fluid">
+            <div class="info">
+                <button class="btn btn-danger eliminar-btn" (click)="eliminarProducto(productosCarrito)"><p id="btn">X</p></button>
+                <h6>{{productosCarrito.nombre}}</h6>
+                <p>Precio: ${{productosCarrito.precio}}</p>
+            </div>
+        </div>
+    }
+    <h3 class="mt-4">Total: $<span id="total">{{calcularTotal() }}</span></h3>
+    <div class="text-center mt-4">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success" (click)="finalizarCompra()">Finalizar </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" (click)="cancelarCompra()">Limpiar </button>
+            </div>
+        </div>
+    </div>
+</div>

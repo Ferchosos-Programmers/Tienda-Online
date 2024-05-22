@@ -1,0 +1,40 @@
+#home{
+    font-family: 'Times New Roman', Times, serif;
+    width: auto;
+}
+
+.hero {
+  background-size: cover;
+  color: black;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero {
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Estilos para las secciones de características */
+.feature-icon img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para las secciones de estadísticas */
+.stat-icon {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon i {
+  font-size: 3rem;
+}

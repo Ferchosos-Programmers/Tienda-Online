@@ -1,0 +1,18 @@
+body {
+    padding-top: 5rem;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    margin-top: 15%;
+}
+.error-container {
+    text-align: center;
+}
+h1 {
+    font-size: 3.5rem;
+}
+p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}

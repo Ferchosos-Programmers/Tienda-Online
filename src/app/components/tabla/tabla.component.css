@@ -1,0 +1,43 @@
+
+h2{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 1%;
+}
+
+#btn-nw{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.table {
+    margin-top: 2%;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-image {
+    max-width: 100px;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+

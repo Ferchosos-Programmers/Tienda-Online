@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .error-container {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .error-code {
+    font-size: 120px;
+  }
+  .error-message {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .home-link {
+    margin-top: 20px;
+  }

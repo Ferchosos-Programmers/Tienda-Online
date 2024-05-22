@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <h2>PRODUCTOS</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="filtromarcas">
+                    <label for="buscarMarcas">Buscar por marcas:</label>
+                    <select class="form-control" id="buscarMarcas" [(ngModel)]="filtroMarca">
+                        <option value="">Todas las marcas</option>
+                        @for (marca of marcasUnicas; track marca) {
+                            <option [value]="marca">{{marca}}</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+
+        <div class="gallery mt-3" id="gallery">
+            @for (productos of productos; track productos ) {
+                @if (!filtroMarca || filtroMarca === productos.marca) {
+                    <div class="col-md-3 mb-3">
+                        <div class="card">
+                            <!-- Aplicar un estilo en línea para limitar el tamaño de la imagen -->
+                            <img src="{{ productos.imagen }}" class="card-img-top" alt="{{ productos.nombre }}">
+                            <div class="card-body">
+                                <h5 class="card-title" id="info">{{ productos.nombre}} {{ productos.marca }}</h5>
+                                <h5 class="card-title" id="precio"><b> $ {{ productos.precio }}</b></h5>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="btn btn-sm" (click)="agregarCarrito(productos)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                            <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                          </svg> COMPRAR</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
